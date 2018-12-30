@@ -6,5 +6,6 @@ $factory->define(\App\Models\Tag::class, function (Faker $faker) {
     return [
         //
         'name'=>$faker->unique()->word,
+        'slug'=>$faker->slug(2),
     ];
 });
