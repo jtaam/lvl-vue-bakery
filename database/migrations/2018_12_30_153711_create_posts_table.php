@@ -15,10 +15,10 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('author_id')->unsigned();
+            $table->unsignedInteger('author_id');
             $table->unsignedInteger('category_id')->default('0');
             $table->string('title');
-            $table->string('slug')->unique();
+            $table->unsignedInteger('slug')->unique();
             $table->string('top_image')->nullable();
             $table->text('top_description')->nullable();
             $table->text('post_promo')->nullable();
