@@ -17,7 +17,8 @@ class PostController extends Controller
     public function index()
     {
         //todo: get posts tags
-        $posts = Post::orderBy('created_at','dest')->with('category','author')->take(5)->get();
+
+        $posts = Post::orderBy('created_at','dest')->with('category','author','comments', 'tags')->take(5)->get();
 //        $posts = Post::all()->take(5);
         return new PostResource($posts);
     }

@@ -60079,7 +60079,7 @@ exports = module.exports = __webpack_require__(167)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.tags li a[data-v-7b554c16]{\n    text-transform: capitalize;\n    margin: 5px;\n}\n", ""]);
 
 // exports
 
@@ -60601,9 +60601,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "BlogComponent",
@@ -60634,6 +60631,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     'profession': '',
                     'image': '',
                     'created_at': ''
+                },
+                comments: {},
+                tags: {
+                    'name': '',
+                    'slug': ''
                 }
             }
         };
@@ -60674,7 +60676,18 @@ var render = function() {
     _vm._l(_vm.posts, function(post) {
       return _c("div", { staticClass: "single-post row" }, [
         _c("div", { staticClass: "col-lg-3  col-md-3 meta-details" }, [
-          _vm._m(0, true),
+          _c(
+            "ul",
+            { staticClass: "tags" },
+            _vm._l(post.tags, function(tag) {
+              return _c("li", [
+                _c("a", { attrs: { href: "tag/" + tag.slug } }, [
+                  _vm._v(_vm._s(tag.name))
+                ])
+              ])
+            }),
+            0
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "user-details row" }, [
             _c("p", { staticClass: "user-name col-lg-12 col-md-12 col-6" }, [
@@ -60697,9 +60710,15 @@ var render = function() {
               _c("span", { staticClass: "lnr lnr-calendar-full" })
             ]),
             _vm._v(" "),
-            _vm._m(1, true),
+            _vm._m(0, true),
             _vm._v(" "),
-            _vm._m(2, true)
+            _c("p", { staticClass: "comments col-lg-12 col-md-12 col-6" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _vm._v(_vm._s(post.comments.length) + " Comments")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "lnr lnr-bubble" })
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -60747,34 +60766,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "tags" }, [
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Food,")])]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Technology,")])]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Politics,")])]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lifestyle")])])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("p", { staticClass: "view col-lg-12 col-md-12 col-6" }, [
       _c("a", { attrs: { href: "#" } }, [_vm._v("1.2M Views")]),
       _vm._v(" "),
       _c("span", { staticClass: "lnr lnr-eye" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "comments col-lg-12 col-md-12 col-6" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("06 Comments")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "lnr lnr-bubble" })
     ])
   }
 ]

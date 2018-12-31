@@ -4,10 +4,7 @@
         <div class="single-post row" v-for="post in posts">
             <div class="col-lg-3  col-md-3 meta-details">
                 <ul class="tags">
-                    <li><a href="#">Food,</a></li>
-                    <li><a href="#">Technology,</a></li>
-                    <li><a href="#">Politics,</a></li>
-                    <li><a href="#">Lifestyle</a></li>
+                    <li v-for="tag in post.tags"><a v-bind:href="'tag/'+tag.slug">{{tag.name}}</a></li>
                 </ul>
                 <div class="user-details row">
                     <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{post.author.first_name}} {{post.author.last_name}}</a> <span
@@ -16,7 +13,7 @@
                             class="lnr lnr-calendar-full"></span></p>
                     <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span
                             class="lnr lnr-eye"></span></p>
-                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span
+                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">{{post.comments.length}} Comments</a> <span
                             class="lnr lnr-bubble"></span></p>
                 </div>
             </div>
@@ -90,7 +87,14 @@
                         'profession':'',
                         'image':'',
                         'created_at':''
-                    }
+                    },
+                    comments:{
+
+                    },
+                    tags:{
+                        'name':'',
+                        'slug':'',
+                    },
                 }
             }
         },//data
@@ -114,5 +118,8 @@
 </script>
 
 <style scoped>
-
+.tags li a{
+    text-transform: capitalize;
+    margin: 5px;
+}
 </style>
