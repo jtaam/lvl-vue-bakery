@@ -25,7 +25,7 @@
     </div>
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
-            <a href="index.html"><img src="{{asset('assets/frontend/img/logo.png')}}" alt="{{config('app.name')}}" title="{{config('app.name')}}"/></a>
+            <a href="{{url('/')}}"><img src="{{asset('assets/frontend/img/logo.png')}}" alt="{{config('app.name')}}" title="{{config('app.name')}}"/></a>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="index.html">Home</a></li>

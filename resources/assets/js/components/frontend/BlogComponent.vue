@@ -10,9 +10,9 @@
                     <li><a href="#">Lifestyle</a></li>
                 </ul>
                 <div class="user-details row">
-                    <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span
+                    <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{post.author.first_name}} {{post.author.last_name}}</a> <span
                             class="lnr lnr-user"></span></p>
-                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span
+                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017 {{post.author.created_at}}</a> <span
                             class="lnr lnr-calendar-full"></span></p>
                     <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span
                             class="lnr lnr-eye"></span></p>
@@ -77,7 +77,20 @@
                     'right_image':'',
                     'public_id':'',
                     'bottom_description':'',
-                    'view_count':''
+                    'view_count':'',
+                    category:{
+                        'name':'',
+                        'slug':'',
+                    },
+                    author:{
+                        'name':'',
+                        'role_id':'',
+                        'first_name':'',
+                        'last_name':'',
+                        'profession':'',
+                        'image':'',
+                        'created_at':''
+                    }
                 }
             }
         },//data
