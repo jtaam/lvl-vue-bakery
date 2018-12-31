@@ -5,8 +5,8 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Post::class, function (Faker $faker) {
     return [
         //
-        'author_id'=>$faker->rand(1,10),
-        'category_id'=>$faker->rand(1,10),
+        'author_id'=>rand(1,10),
+        'category_id'=>rand(1,10),
         'title'=>$faker->sentence(5),
         'slug'=>$faker->slug(5),
         'top_image'=>$faker->imageUrl(555,280),
@@ -15,8 +15,8 @@ $factory->define(App\Models\Post::class, function (Faker $faker) {
         'left_image'=>$faker->imageUrl(360,350),
         'right_image'=>$faker->imageUrl(360,350),
         'bottom_description'=>$faker->paragraphs(2,true),
-        'view_count'=>$faker->rand(0,15),
-        'status'=>$faker->rand(0,1),
-        'is_approved'=>$faker->rand(0,1),
+        'view_count'=>rand(0,15),
+        'status'=>rand(0,1),
+        'is_approved'=>rand(0,1),
     ];
 });
