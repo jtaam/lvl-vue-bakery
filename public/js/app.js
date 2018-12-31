@@ -60713,7 +60713,10 @@ var render = function() {
           _vm._v(" "),
           _c(
             "a",
-            { staticClass: "posts-title", attrs: { href: "blog-single.html" } },
+            {
+              staticClass: "posts-title",
+              attrs: { href: "post/" + post.slug }
+            },
             [_c("h3", [_vm._v(_vm._s(post.title))])]
           ),
           _vm._v(" "),
@@ -60725,9 +60728,14 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("a", { staticClass: "primary-btn", attrs: { href: "#" } }, [
-            _vm._v("View More")
-          ])
+          _c(
+            "a",
+            {
+              staticClass: "primary-btn",
+              attrs: { href: "post/" + post.slug }
+            },
+            [_vm._v("View More")]
+          )
         ])
       ])
     }),
