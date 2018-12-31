@@ -17,7 +17,8 @@ Vue.filter('userCreateDate', function(created){
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('posts-list', require('./components/frontend/BlogComponent.vue'));
+Vue.component('posts-list', require('./components/frontend/BlogComponent'));
+Vue.component('post-categories', require('./components/frontend/PostCategoriesComponent'));
 
 const app = new Vue({
     el: '#app'

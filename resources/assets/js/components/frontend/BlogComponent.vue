@@ -4,7 +4,7 @@
         <div class="single-post row" v-for="post in posts">
             <div class="col-lg-3  col-md-3 meta-details">
                 <ul class="tags">
-                    <li v-for="tag in post.tags"><a v-bind:href="'tag/'+tag.slug">{{tag.name}}</a></li>
+                    <li v-for="tag in post.tags"><a v-bind:href="'tag/'+tag.slug">{{tag.name}} <span class="lnr lnr-tag"></span></a></li>
                 </ul>
                 <div class="user-details row">
                     <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{post.author.first_name}} {{post.author.last_name}}</a> <span
@@ -120,6 +120,9 @@
 <style scoped>
 .tags li a{
     text-transform: capitalize;
-    margin: 5px;
+    margin: 2px;
+}
+.tags li a span{
+    font-size: 90%;
 }
 </style>

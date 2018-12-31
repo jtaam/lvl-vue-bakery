@@ -17508,6 +17508,7 @@ Vue.filter('userCreateDate', function (created) {
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('posts-list', __webpack_require__(164));
+Vue.component('post-categories', __webpack_require__(187));
 
 var app = new Vue({
   el: '#app'
@@ -60079,7 +60080,7 @@ exports = module.exports = __webpack_require__(167)(false);
 
 
 // module
-exports.push([module.i, "\n.tags li a[data-v-7b554c16]{\n    text-transform: capitalize;\n    margin: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.tags li a[data-v-7b554c16]{\n    text-transform: capitalize;\n    margin: 2px;\n}\n.tags li a span[data-v-7b554c16]{\n    font-size: 90%;\n}\n", ""]);
 
 // exports
 
@@ -60682,7 +60683,8 @@ var render = function() {
             _vm._l(post.tags, function(tag) {
               return _c("li", [
                 _c("a", { attrs: { href: "tag/" + tag.slug } }, [
-                  _vm._v(_vm._s(tag.name))
+                  _vm._v(_vm._s(tag.name) + " "),
+                  _c("span", { staticClass: "lnr lnr-tag" })
                 ])
               ])
             }),
@@ -60787,6 +60789,207 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(190)
+}
+var normalizeComponent = __webpack_require__(170)
+/* script */
+var __vue_script__ = __webpack_require__(188)
+/* template */
+var __vue_template__ = __webpack_require__(192)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-9b8c5b0a"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/frontend/PostCategoriesComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9b8c5b0a", Component.options)
+  } else {
+    hotAPI.reload("data-v-9b8c5b0a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 188 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "PostCategoriesComponent",
+
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    },
+    //mounted
+
+    data: function data() {
+        return {
+            categories: [],
+            category: {
+                'name': '',
+                'slug': ''
+            }
+        };
+    },
+    //data
+
+    created: function created() {
+        this.fetchCategories();
+    },
+    //created
+
+    methods: {
+        fetchCategories: function fetchCategories() {
+            var _this = this;
+
+            fetch('api/categories').then(function (response) {
+                return response.json();
+            }).then(function (response) {
+                _this.categories = response.data;
+            });
+        } //fetchCategories
+
+    } //methods
+});
+
+/***/ }),
+/* 189 */,
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(191);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(168)("ca2391dc", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9b8c5b0a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PostCategoriesComponent.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9b8c5b0a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PostCategoriesComponent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(167)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.cat-list li a p[data-v-9b8c5b0a] {\n    text-transform: capitalize;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ul",
+    { staticClass: "cat-list" },
+    _vm._l(_vm.categories, function(category) {
+      return _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "d-flex justify-content-between",
+            attrs: { href: "category/" + category.slug }
+          },
+          [
+            _c("p", [_vm._v(_vm._s(category.name))]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(category.posts_count))])
+          ]
+        )
+      ])
+    }),
+    0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9b8c5b0a", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
