@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         //
-        $posts = Post::all();
+        $posts = Post::all()->take(5);
         return new PostResource($posts);
     }
 
