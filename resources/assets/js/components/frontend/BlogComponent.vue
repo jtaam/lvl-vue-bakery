@@ -61,6 +61,10 @@
     export default {
         name: "BlogComponent",
 
+        mounted(){
+            console.log('Blog Component mounted.')
+        },// mounted
+
         data(){
             return{
                 posts:[],

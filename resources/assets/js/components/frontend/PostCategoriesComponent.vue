@@ -14,7 +14,7 @@
         name:"PostCategoriesComponent",
 
         mounted() {
-            console.log('Component mounted.')
+            console.log('Post Categories Component mounted.')
         },//mounted
 
         data(){

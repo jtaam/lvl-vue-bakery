@@ -19,6 +19,7 @@ Vue.filter('userCreateDate', function(created){
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('posts-list', require('./components/frontend/BlogComponent'));
 Vue.component('post-categories', require('./components/frontend/PostCategoriesComponent'));
+Vue.component('tag-clouds', require('./components/frontend/TagCloudsComponent'));
 
 const app = new Vue({
     el: '#app'
