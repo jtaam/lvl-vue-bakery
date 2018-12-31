@@ -28,8 +28,16 @@ class User extends Authenticatable
     ];
 
     // Database Relationships
+    // Role
+    public function role(){
+        return $this->belongsTo('App\Models\Role');
+    }
     // Post
     public function posts(){
         return $this->hasMany('App\Models\Post');
+    }
+    // Comment
+    public function comments(){
+        return $this->hasMany('App\Models\Comment');
     }
 }
