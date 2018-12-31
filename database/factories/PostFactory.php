@@ -8,7 +8,7 @@ $factory->define(App\Models\Post::class, function (Faker $faker) {
         'author_id'=>rand(1,10),
         'category_id'=>rand(1,10),
         'title'=>$faker->sentence(5),
-        'slug'=>$faker->slug(5),
+        'slug'=>$faker->slug(5, true),
         'top_image'=>$faker->imageUrl(555,280),
         'top_description'=>$faker->paragraph(3,true),
         'post_promo'=>$faker->paragraph(1),
