@@ -63471,26 +63471,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "PostComponent",
@@ -63503,63 +63483,45 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             loading: false,
-            post: null,
-            error: null
 
-            // post:{
-            //     "title": "",
-            //     "slug": "",
-            //     "top_image": "",
-            //     "top_description": "",
-            //     "post_promo": "",
-            //     "left_image": "",
-            //     "right_image": "",
-            //     "public_id": null,
-            //     "bottom_description": "",
-            //     "view_count": 4,
-            //
-            // },
+            error: null,
+
+            post: {
+                "title": "",
+                "slug": "",
+                "top_image": "",
+                "top_description": "",
+                "post_promo": "",
+                "left_image": "",
+                "right_image": "",
+                "public_id": null,
+                "bottom_description": "",
+                "view_count": 4
+
+            }
         };
     },
     //data
 
     created: function created() {
-        this.fetchData();
+        this.fetchPost();
     },
     //created
 
     methods: {
-        fetchData: function fetchData() {
+        fetchPost: function fetchPost() {
             var _this = this;
 
-            this.error = this.post = null;
-            // this.loading = true
-            // replace `getPost` with your data fetching util / API wrapper
-            fetch(this.$route.params.slug, function (err, post) {
-                _this.loading = false;
-                if (err) {
-                    _this.error = err.toString();
-                } else {
-                    _this.post = post;
-                }
+            // Optionally the request above could also be done as
+            axios.get('/api/post/' + this.$route.params.slug).then(function (response) {
+                console.log(response);
+                _this.post = response.data.data[0];
+            }).catch(function (error) {
+                console.log(error);
+            }).then(function () {
+                // always executed
             });
-        }
-
-        // fetchData($slug){
-        //     fetch('api/post'+$slug).
-        //         then(response => response.json()).
-        //         then(response => {
-        //             this.post = response.data;
-        //     })
-        // }//fetchData
-        // getPost(this.$route.params.slug, (err, post) => {
-        //     this.loading = false
-        //     if (err) {
-        //       this.error = err.toString()
-        //     } else {
-        //       this.post = post
-        //     }
-        //   })
+        } // fetchPost
 
     } //methods
 });
@@ -63578,7 +63540,7 @@ var render = function() {
         _c("div", { staticClass: "feature-img" }, [
           _c("img", {
             staticClass: "img-fluid",
-            attrs: { src: _vm.post.top_image, alt: "" }
+            attrs: { src: _vm.post.top_image, alt: _vm.post.title }
           })
         ])
       ]),
@@ -63592,31 +63554,45 @@ var render = function() {
         _vm._v(" "),
         _c("p", { staticClass: "excert" }, [
           _vm._v(
-            "\n                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should\n                have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.\n            "
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n                Boot camps have its supporters and its detractors. Some people do not understand why you should have\n                to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the\n                camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who\n                has the willpower to actually sit through a self-imposed\n            "
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n                Boot camps have its supporters and its detractors. Some people do not understand why you should have\n                to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the\n                camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who\n                has the willpower to actually sit through a self-imposed\n            "
+            "\n                " +
+              _vm._s(_vm.post.top_description) +
+              "\n            "
           )
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1)
+      _c("div", { staticClass: "col-lg-12" }, [
+        _c("div", { staticClass: "quotes" }, [
+          _vm._v(
+            "\n                " +
+              _vm._s(_vm.post.post_promo) +
+              "\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-30 mb-30" }, [
+          _c("div", { staticClass: "col-6" }, [
+            _c("img", {
+              staticClass: "img-fluid",
+              attrs: { src: _vm.post.left_image, alt: _vm.post.title }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("img", {
+              staticClass: "img-fluid",
+              attrs: { src: _vm.post.right_image, alt: _vm.post.title }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-12 mt-30" }, [
+            _c("p", [_vm._v(_vm._s(_vm.post.bottom_description))])
+          ])
+        ])
+      ])
     ]),
     _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _vm._m(3),
-    _vm._v(" "),
-    _vm._m(4)
+    _vm._m(1)
   ])
 }
 var staticRenderFns = [
@@ -63685,335 +63661,6 @@ var staticRenderFns = [
             ])
           ])
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-12" }, [
-      _c("div", { staticClass: "quotes" }, [
-        _vm._v(
-          "\n                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should\n                have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of\n                the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.\n            "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mt-30 mb-30" }, [
-        _c("div", { staticClass: "col-6" }, [
-          _c("img", {
-            staticClass: "img-fluid",
-            attrs: { src: "img/blog/post-img1.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c("img", {
-            staticClass: "img-fluid",
-            attrs: { src: "img/blog/post-img2.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-12 mt-30" }, [
-          _c("p", [
-            _vm._v(
-              "\n                        MCSE boot camps have its supporters and its detractors. Some people do not understand why\n                        you should have to spend money on boot camp when you can get the MCSE study materials\n                        yourself at a fraction of the camp price. However, who has the willpower.\n                    "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                        MCSE boot camps have its supporters and its detractors. Some people do not understand why\n                        you should have to spend money on boot camp when you can get the MCSE study materials\n                        yourself at a fraction of the camp price. However, who has the willpower.\n                    "
-            )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navigation-area" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center"
-          },
-          [
-            _c("div", { staticClass: "thumb" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "img-fluid",
-                  attrs: { src: "img/blog/prev.jpg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "arrow" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("span", { staticClass: "lnr text-white lnr-arrow-left" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "detials" }, [
-              _c("p", [_vm._v("Prev Post")]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "#" } }, [
-                _c("h4", [_vm._v("Space The Final Frontier")])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center"
-          },
-          [
-            _c("div", { staticClass: "detials" }, [
-              _c("p", [_vm._v("Next Post")]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "#" } }, [
-                _c("h4", [_vm._v("Telescopes 101")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "arrow" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("span", { staticClass: "lnr text-white lnr-arrow-right" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "thumb" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "img-fluid",
-                  attrs: { src: "img/blog/next.jpg", alt: "" }
-                })
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "comments-area" }, [
-      _c("h4", [_vm._v("05 Comments")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comment-list" }, [
-        _c(
-          "div",
-          { staticClass: "single-comment justify-content-between d-flex" },
-          [
-            _c("div", { staticClass: "user justify-content-between d-flex" }, [
-              _c("div", { staticClass: "thumb" }, [
-                _c("img", { attrs: { src: "img/blog/c1.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "desc" }, [
-                _c("h5", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Emilly Blunt")])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "date" }, [
-                  _vm._v("December 4, 2017 at 3:12 pm ")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "comment" }, [
-                  _vm._v(
-                    "\n                            Never say goodbye till the end comes!\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-btn" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-reply text-uppercase",
-                  attrs: { href: "" }
-                },
-                [_vm._v("reply")]
-              )
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comment-list left-padding" }, [
-        _c(
-          "div",
-          { staticClass: "single-comment justify-content-between d-flex" },
-          [
-            _c("div", { staticClass: "user justify-content-between d-flex" }, [
-              _c("div", { staticClass: "thumb" }, [
-                _c("img", { attrs: { src: "img/blog/c2.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "desc" }, [
-                _c("h5", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Elsie Cunningham")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "date" }, [
-                  _vm._v("December 4, 2017 at 3:12 pm ")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "comment" }, [
-                  _vm._v(
-                    "\n                            Never say goodbye till the end comes!\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-btn" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-reply text-uppercase",
-                  attrs: { href: "" }
-                },
-                [_vm._v("reply")]
-              )
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comment-list left-padding" }, [
-        _c(
-          "div",
-          { staticClass: "single-comment justify-content-between d-flex" },
-          [
-            _c("div", { staticClass: "user justify-content-between d-flex" }, [
-              _c("div", { staticClass: "thumb" }, [
-                _c("img", { attrs: { src: "img/blog/c3.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "desc" }, [
-                _c("h5", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Annie Stephens")])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "date" }, [
-                  _vm._v("December 4, 2017 at 3:12 pm ")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "comment" }, [
-                  _vm._v(
-                    "\n                            Never say goodbye till the end comes!\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-btn" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-reply text-uppercase",
-                  attrs: { href: "" }
-                },
-                [_vm._v("reply")]
-              )
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comment-list" }, [
-        _c(
-          "div",
-          { staticClass: "single-comment justify-content-between d-flex" },
-          [
-            _c("div", { staticClass: "user justify-content-between d-flex" }, [
-              _c("div", { staticClass: "thumb" }, [
-                _c("img", { attrs: { src: "img/blog/c4.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "desc" }, [
-                _c("h5", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Maria Luna")])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "date" }, [
-                  _vm._v("December 4, 2017 at 3:12 pm ")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "comment" }, [
-                  _vm._v(
-                    "\n                            Never say goodbye till the end comes!\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-btn" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-reply text-uppercase",
-                  attrs: { href: "" }
-                },
-                [_vm._v("reply")]
-              )
-            ])
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comment-list" }, [
-        _c(
-          "div",
-          { staticClass: "single-comment justify-content-between d-flex" },
-          [
-            _c("div", { staticClass: "user justify-content-between d-flex" }, [
-              _c("div", { staticClass: "thumb" }, [
-                _c("img", { attrs: { src: "img/blog/c5.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "desc" }, [
-                _c("h5", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Ina Hayes")])
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "date" }, [
-                  _vm._v("December 4, 2017 at 3:12 pm ")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "comment" }, [
-                  _vm._v(
-                    "\n                            Never say goodbye till the end comes!\n                        "
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "reply-btn" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-reply text-uppercase",
-                  attrs: { href: "" }
-                },
-                [_vm._v("reply")]
-              )
-            ])
-          ]
-        )
       ])
     ])
   },
