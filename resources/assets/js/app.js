@@ -5,6 +5,9 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+// Vue router
+import Router from './components/frontend/routes.js'
+
 // Moment js
 import moment from 'moment';
 
@@ -20,9 +23,11 @@ Vue.filter('userCreateDate', function(created){
 Vue.component('posts-list', require('./components/frontend/BlogComponent'));
 Vue.component('post-categories', require('./components/frontend/PostCategoriesComponent'));
 Vue.component('tag-clouds', require('./components/frontend/TagCloudsComponent'));
+Vue.component('show-post', require('./components/frontend/PostComponent'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router: Router
 });
 
 

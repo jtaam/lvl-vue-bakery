@@ -1,6 +1,6 @@
 <template>
     <ul class="tag-clouds" >
-        <li v-for="tag in tags"><a v-bind:href="'tag'+tag.slug">{{tag.name}}</a></li>
+        <li v-for="tag in tags"><a v-bind:href="'tag/'+tag.slug">{{tag.name}}</a></li>
     </ul>
 </template>
 

@@ -49,7 +49,9 @@
 <section class="post-content-area" id="app">
     <div class="container">
         <div class="row">
-            @include('frontend.inc.posts-list')
+            <router-view></router-view>
+
+            {{--@include('frontend.inc.posts-list')--}}
 
             @include('frontend.inc.sidebar-widgets')
         </div>

@@ -21,12 +21,13 @@
                 <div class="feature-img">
                     <img class="img-fluid" v-bind:src=post.top_image v-bind:alt=post.title>
                 </div>
-                <a class="posts-title" v-bind:href="'post/'+post.slug"><h3>{{post.title}}</h3>
-                </a>
+                <router-link :to="{ name: 'post', params: { slug: post.slug }}" class="posts-title"><h3>{{post.title}}</h3></router-link>
+                <!--<a class="posts-title" v-bind:href="'post/'+post.slug"><h3>{{post.title}}</h3></a>-->
                 <p class="excert">
                     {{post.post_promo}}
                 </p>
-                <a v-bind:href="'post/'+post.slug" class="primary-btn">View More</a>
+                <router-link :to="{ name: 'post', params: { slug: post.slug }}" class="primary-btn">View More</router-link>
+                <!--<a v-bind:href="'post/'+post.slug" class="primary-btn">View More</a>-->
             </div>
         </div>
 
