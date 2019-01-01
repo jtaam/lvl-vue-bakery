@@ -25,6 +25,10 @@ Vue.component('post-categories', require('./components/frontend/PostCategoriesCo
 Vue.component('tag-clouds', require('./components/frontend/TagCloudsComponent'));
 Vue.component('show-post', require('./components/frontend/PostComponent'));
 
+
+// axios
+const axios = require('axios');
+
 const app = new Vue({
     el: '#app',
     router: Router

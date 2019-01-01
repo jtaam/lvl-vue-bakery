@@ -3,7 +3,7 @@
         <div class="single-post row">
             <div class="col-lg-12">
                 <div class="feature-img">
-                    <img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
+                    <img class="img-fluid" v-bind:src=post.top_image alt="">
                 </div>
             </div>
             <div class="col-lg-3  col-md-3 meta-details">
@@ -14,10 +14,14 @@
                     <li><a href="#">Lifestyle</a></li>
                 </ul>
                 <div class="user-details row">
-                    <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-                    <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
+                    <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span
+                            class="lnr lnr-user"></span></p>
+                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span
+                            class="lnr lnr-calendar-full"></span></p>
+                    <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span
+                            class="lnr lnr-eye"></span></p>
+                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span
+                            class="lnr lnr-bubble"></span></p>
                     <ul class="social-links col-lg-12 col-md-12 col-6">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -27,20 +31,29 @@
                 </div>
             </div>
             <div class="col-lg-9 col-md-9">
-                <a class="posts-title" href="#"><h3>Astronomy Binoculars A Great Alternative</h3></a>
+                <a class="posts-title" href="#"><h3>{{post.title}}</h3></a>
                 <p class="excert">
-                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
+                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should
+                    have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
                 </p>
                 <p>
-                    Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
+                    Boot camps have its supporters and its detractors. Some people do not understand why you should have
+                    to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the
+                    camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who
+                    has the willpower to actually sit through a self-imposed
                 </p>
                 <p>
-                    Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
+                    Boot camps have its supporters and its detractors. Some people do not understand why you should have
+                    to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the
+                    camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who
+                    has the willpower to actually sit through a self-imposed
                 </p>
             </div>
             <div class="col-lg-12">
                 <div class="quotes">
-                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
+                    MCSE boot camps have its supporters and its detractors. Some people do not understand why you should
+                    have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of
+                    the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
                 </div>
                 <div class="row mt-30 mb-30">
                     <div class="col-6">
@@ -51,10 +64,14 @@
                     </div>
                     <div class="col-lg-12 mt-30">
                         <p>
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.
+                            MCSE boot camps have its supporters and its detractors. Some people do not understand why
+                            you should have to spend money on boot camp when you can get the MCSE study materials
+                            yourself at a fraction of the camp price. However, who has the willpower.
                         </p>
                         <p>
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.
+                            MCSE boot camps have its supporters and its detractors. Some people do not understand why
+                            you should have to spend money on boot camp when you can get the MCSE study materials
+                            yourself at a fraction of the camp price. However, who has the willpower.
                         </p>
                     </div>
                 </div>
@@ -191,17 +208,22 @@
             <form>
                 <div class="form-group form-inline">
                     <div class="form-group col-lg-6 col-md-12 name">
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name"
+                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
                     </div>
                     <div class="form-group col-lg-6 col-md-12 email">
-                        <input type="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email address"
+                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
+                    <input type="text" class="form-control" id="subject" placeholder="Subject"
+                           onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                    <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege"
+                              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"
+                              required=""></textarea>
                 </div>
                 <a href="#" class="primary-btn text-uppercase">Post Comment</a>
             </form>
@@ -211,16 +233,68 @@
 
 <script>
     export default {
-        name:"PostComponent",
+        name: "PostComponent",
 
         mounted() {
             console.log('Post Component mounted.')
         },// mounted
 
-        data(){},//data
+        data() {
+            return {
+                loading: false,
+                post: null,
+                error: null,
 
-        created(){},//created
+                // post:{
+                //     "title": "",
+                //     "slug": "",
+                //     "top_image": "",
+                //     "top_description": "",
+                //     "post_promo": "",
+                //     "left_image": "",
+                //     "right_image": "",
+                //     "public_id": null,
+                //     "bottom_description": "",
+                //     "view_count": 4,
+                //
+                // },
+            }
+        },//data
 
-        methods:{},//methods
+        created() {
+            this.fetchData();
+        },//created
+
+        methods: {
+            fetchData() {
+                this.error = this.post = null
+                // this.loading = true
+                // replace `getPost` with your data fetching util / API wrapper
+                fetch(this.$route.params.slug, (err, post) => {
+                    this.loading = false
+                    if (err) {
+                        this.error = err.toString()
+                    } else {
+                        this.post = post
+                    }
+                })
+            }
+
+            // fetchData($slug){
+            //     fetch('api/post'+$slug).
+            //         then(response => response.json()).
+            //         then(response => {
+            //             this.post = response.data;
+            //     })
+            // }//fetchData
+            // getPost(this.$route.params.slug, (err, post) => {
+            //     this.loading = false
+            //     if (err) {
+            //       this.error = err.toString()
+            //     } else {
+            //       this.post = post
+            //     }
+            //   })
+        },//methods
     }
 </script>

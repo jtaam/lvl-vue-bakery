@@ -109,13 +109,27 @@
         },//created
 
         methods:{
+            // fetchPosts(){
+            //     fetch('api/posts').
+            //         then( response => response.json() ).
+            //         then( response => {
+            //             this.posts = response.data;
+            //     })
+            // } // fetchPosts
             fetchPosts(){
-                fetch('api/posts').
-                    then( response => response.json() ).
-                    then( response => {
-                        this.posts = response.data;
-                })
-            } // fetchPosts
+                // Make a request for a user with a given ID
+                axios.get('/api/posts')
+                    .then(response => {
+                        this.posts = response.data.data
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    })
+                    .then(function () {
+                        // always executed
+                    });
+            },// fetchPosts
         },//methods
 
     }

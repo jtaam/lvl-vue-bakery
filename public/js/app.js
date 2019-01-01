@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 141);
+/******/ 	return __webpack_require__(__webpack_require__.s = 142);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -4588,7 +4588,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(8);
+var bind = __webpack_require__(9);
 var isBuffer = __webpack_require__(149);
 
 /*global toString:true*/
@@ -5051,10 +5051,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(10);
+    adapter = __webpack_require__(11);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(10);
+    adapter = __webpack_require__(11);
   }
   return adapter;
 }
@@ -5125,7 +5125,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
 
 /***/ }),
 /* 5 */
@@ -5469,6 +5469,12 @@ module.exports = function(module) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(148);
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -5484,7 +5490,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -5674,7 +5680,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5685,7 +5691,7 @@ var settle = __webpack_require__(152);
 var buildURL = __webpack_require__(154);
 var parseHeaders = __webpack_require__(155);
 var isURLSameOrigin = __webpack_require__(156);
-var createError = __webpack_require__(11);
+var createError = __webpack_require__(12);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(157);
 
 module.exports = function xhrAdapter(config) {
@@ -5861,7 +5867,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5886,7 +5892,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5898,7 +5904,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5924,7 +5930,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17021,7 +17027,7 @@ module.exports = Vue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(166).setImmediate))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -17072,7 +17078,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -17119,7 +17125,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17196,7 +17202,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17335,7 +17341,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17398,7 +17404,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17461,7 +17467,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17587,7 +17593,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17650,7 +17656,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17758,7 +17764,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17821,7 +17827,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -17930,7 +17936,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18066,7 +18072,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18160,7 +18166,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18222,7 +18228,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18345,7 +18351,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18468,7 +18474,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18580,7 +18586,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18735,7 +18741,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -18827,7 +18833,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19010,7 +19016,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19077,7 +19083,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19161,7 +19167,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19225,7 +19231,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19305,7 +19311,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19385,7 +19391,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19465,7 +19471,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19568,7 +19574,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19672,7 +19678,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19743,7 +19749,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19810,7 +19816,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19881,7 +19887,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -19952,7 +19958,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20018,7 +20024,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20089,7 +20095,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20164,7 +20170,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20260,7 +20266,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20356,7 +20362,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20443,7 +20449,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20527,7 +20533,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20597,7 +20603,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20707,7 +20713,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20820,7 +20826,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20884,7 +20890,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -20971,7 +20977,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21049,7 +21055,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21131,7 +21137,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21210,7 +21216,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21290,7 +21296,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21371,7 +21377,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21498,7 +21504,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21626,7 +21632,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21727,7 +21733,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -21855,7 +21861,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22013,7 +22019,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22127,7 +22133,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22226,7 +22232,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22312,7 +22318,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22448,7 +22454,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22521,7 +22527,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22617,7 +22623,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22703,7 +22709,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22796,7 +22802,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -22887,7 +22893,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23001,7 +23007,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23131,7 +23137,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23216,7 +23222,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23339,7 +23345,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23430,7 +23436,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23570,7 +23576,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23644,7 +23650,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23766,7 +23772,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23867,7 +23873,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -23983,7 +23989,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24051,7 +24057,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24145,7 +24151,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24230,7 +24236,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24338,7 +24344,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24502,7 +24508,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24588,7 +24594,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24674,7 +24680,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24738,7 +24744,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24835,7 +24841,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -24901,7 +24907,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25028,7 +25034,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25119,7 +25125,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25210,7 +25216,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25274,7 +25280,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25402,7 +25408,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25532,7 +25538,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25601,7 +25607,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25666,7 +25672,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25745,7 +25751,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -25931,7 +25937,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26033,7 +26039,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26097,7 +26103,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26172,7 +26178,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26332,7 +26338,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26509,7 +26515,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26581,7 +26587,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26696,7 +26702,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26811,7 +26817,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26903,7 +26909,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -26976,7 +26982,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27039,7 +27045,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27172,7 +27178,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27265,7 +27271,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27336,7 +27342,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27456,7 +27462,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27527,7 +27533,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27593,7 +27599,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27719,7 +27725,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -27817,7 +27823,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27912,7 +27918,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -27974,7 +27980,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28036,7 +28042,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js language configuration
@@ -28159,7 +28165,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28314,7 +28320,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28416,7 +28422,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28478,7 +28484,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28540,7 +28546,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28623,7 +28629,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28695,7 +28701,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28759,7 +28765,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28873,7 +28879,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -28980,7 +28986,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -29087,15 +29093,15 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(142);
+__webpack_require__(143);
 module.exports = __webpack_require__(188);
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29107,9 +29113,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * JavaScript dependencies
  */
 
-__webpack_require__(143);
+__webpack_require__(144);
 
-window.Vue = __webpack_require__(14);
+window.Vue = __webpack_require__(15);
 // Vue router
 
 
@@ -29125,10 +29131,13 @@ Vue.filter('userCreateDate', function (created) {
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('posts-list', __webpack_require__(15));
+Vue.component('posts-list', __webpack_require__(16));
 Vue.component('post-categories', __webpack_require__(178));
 Vue.component('tag-clouds', __webpack_require__(183));
-Vue.component('show-post', __webpack_require__(16));
+Vue.component('show-post', __webpack_require__(17));
+
+// axios
+var axios = __webpack_require__(8);
 
 var app = new Vue({
   el: '#app',
@@ -29136,11 +29145,11 @@ var app = new Vue({
 });
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(144);
+window._ = __webpack_require__(145);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -29149,9 +29158,9 @@ window._ = __webpack_require__(144);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(145);
+  window.$ = window.jQuery = __webpack_require__(146);
 
-  __webpack_require__(146);
+  __webpack_require__(147);
 } catch (e) {}
 
 /**
@@ -29160,7 +29169,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(147);
+window.axios = __webpack_require__(8);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -29196,7 +29205,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -46311,7 +46320,7 @@ if (token) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(7)(module)))
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -56682,7 +56691,7 @@ return jQuery;
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports) {
 
 /*!
@@ -59096,12 +59105,6 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 147 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(148);
-
-/***/ }),
 /* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -59109,7 +59112,7 @@ module.exports = __webpack_require__(148);
 
 
 var utils = __webpack_require__(1);
-var bind = __webpack_require__(8);
+var bind = __webpack_require__(9);
 var Axios = __webpack_require__(150);
 var defaults = __webpack_require__(4);
 
@@ -59144,9 +59147,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(13);
+axios.Cancel = __webpack_require__(14);
 axios.CancelToken = __webpack_require__(164);
-axios.isCancel = __webpack_require__(12);
+axios.isCancel = __webpack_require__(13);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -59299,7 +59302,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(11);
+var createError = __webpack_require__(12);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -59734,7 +59737,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(1);
 var transformData = __webpack_require__(161);
-var isCancel = __webpack_require__(12);
+var isCancel = __webpack_require__(13);
 var defaults = __webpack_require__(4);
 var isAbsoluteURL = __webpack_require__(162);
 var combineURLs = __webpack_require__(163);
@@ -59894,7 +59897,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(13);
+var Cancel = __webpack_require__(14);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -60246,19 +60249,19 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(10)))
 
 /***/ }),
 /* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__BlogComponent__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__BlogComponent__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__BlogComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__BlogComponent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PostComponent__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PostComponent__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PostComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__PostComponent__);
 
 
@@ -63099,16 +63102,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     //created
 
     methods: {
+        // fetchPosts(){
+        //     fetch('api/posts').
+        //         then( response => response.json() ).
+        //         then( response => {
+        //             this.posts = response.data;
+        //     })
+        // } // fetchPosts
         fetchPosts: function fetchPosts() {
             var _this = this;
 
-            fetch('api/posts').then(function (response) {
-                return response.json();
-            }).then(function (response) {
-                _this.posts = response.data;
+            // Make a request for a user with a given ID
+            axios.get('/api/posts').then(function (response) {
+                _this.posts = response.data.data;
+            }).catch(function (error) {
+                // handle error
+                console.log(error);
+            }).then(function () {
+                // always executed
             });
-        } // fetchPosts
-
+        }
     } //methods
 
 });
@@ -63456,6 +63469,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "PostComponent",
@@ -63465,13 +63500,68 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     // mounted
 
-    data: function data() {},
+    data: function data() {
+        return {
+            loading: false,
+            post: null,
+            error: null
+
+            // post:{
+            //     "title": "",
+            //     "slug": "",
+            //     "top_image": "",
+            //     "top_description": "",
+            //     "post_promo": "",
+            //     "left_image": "",
+            //     "right_image": "",
+            //     "public_id": null,
+            //     "bottom_description": "",
+            //     "view_count": 4,
+            //
+            // },
+        };
+    },
     //data
 
-    created: function created() {},
+    created: function created() {
+        this.fetchData();
+    },
     //created
 
-    methods: {} //methods
+    methods: {
+        fetchData: function fetchData() {
+            var _this = this;
+
+            this.error = this.post = null;
+            // this.loading = true
+            // replace `getPost` with your data fetching util / API wrapper
+            fetch(this.$route.params.slug, function (err, post) {
+                _this.loading = false;
+                if (err) {
+                    _this.error = err.toString();
+                } else {
+                    _this.post = post;
+                }
+            });
+        }
+
+        // fetchData($slug){
+        //     fetch('api/post'+$slug).
+        //         then(response => response.json()).
+        //         then(response => {
+        //             this.post = response.data;
+        //     })
+        // }//fetchData
+        // getPost(this.$route.params.slug, (err, post) => {
+        //     this.loading = false
+        //     if (err) {
+        //       this.error = err.toString()
+        //     } else {
+        //       this.post = post
+        //     }
+        //   })
+
+    } //methods
 });
 
 /***/ }),
@@ -63482,527 +63572,519 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "col-lg-8 posts-list" }, [
+    _c("div", { staticClass: "single-post row" }, [
+      _c("div", { staticClass: "col-lg-12" }, [
+        _c("div", { staticClass: "feature-img" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: _vm.post.top_image, alt: "" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-9 col-md-9" }, [
+        _c("a", { staticClass: "posts-title", attrs: { href: "#" } }, [
+          _c("h3", [_vm._v(_vm._s(_vm.post.title))])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "excert" }, [
+          _vm._v(
+            "\n                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should\n                have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                Boot camps have its supporters and its detractors. Some people do not understand why you should have\n                to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the\n                camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who\n                has the willpower to actually sit through a self-imposed\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n                Boot camps have its supporters and its detractors. Some people do not understand why you should have\n                to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the\n                camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who\n                has the willpower to actually sit through a self-imposed\n            "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ]),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
+    _vm._m(4)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-8 posts-list" }, [
-      _c("div", { staticClass: "single-post row" }, [
-        _c("div", { staticClass: "col-lg-12" }, [
-          _c("div", { staticClass: "feature-img" }, [
-            _c("img", {
-              staticClass: "img-fluid",
-              attrs: { src: "img/blog/feature-img1.jpg", alt: "" }
-            })
-          ])
+    return _c("div", { staticClass: "col-lg-3  col-md-3 meta-details" }, [
+      _c("ul", { staticClass: "tags" }, [
+        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Food,")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Technology,")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Politics,")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lifestyle")])])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "user-details row" }, [
+        _c("p", { staticClass: "user-name col-lg-12 col-md-12 col-6" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("Mark wiens")]),
+          _vm._v(" "),
+          _c("span", { staticClass: "lnr lnr-user" })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-3  col-md-3 meta-details" }, [
-          _c("ul", { staticClass: "tags" }, [
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Food,")])]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Technology,")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Politics,")])
-            ]),
-            _vm._v(" "),
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lifestyle")])])
-          ]),
+        _c("p", { staticClass: "date col-lg-12 col-md-12 col-6" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("12 Dec, 2017")]),
           _vm._v(" "),
-          _c("div", { staticClass: "user-details row" }, [
-            _c("p", { staticClass: "user-name col-lg-12 col-md-12 col-6" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Mark wiens")]),
-              _vm._v(" "),
-              _c("span", { staticClass: "lnr lnr-user" })
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "date col-lg-12 col-md-12 col-6" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("12 Dec, 2017")]),
-              _vm._v(" "),
-              _c("span", { staticClass: "lnr lnr-calendar-full" })
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "view col-lg-12 col-md-12 col-6" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("1.2M Views")]),
-              _vm._v(" "),
-              _c("span", { staticClass: "lnr lnr-eye" })
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "comments col-lg-12 col-md-12 col-6" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("06 Comments")]),
-              _vm._v(" "),
-              _c("span", { staticClass: "lnr lnr-bubble" })
-            ]),
-            _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "social-links col-lg-12 col-md-12 col-6" },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fa fa-facebook" })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fa fa-twitter" })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fa fa-github" })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fa fa-behance" })
-                  ])
-                ])
-              ]
-            )
-          ])
+          _c("span", { staticClass: "lnr lnr-calendar-full" })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-lg-9 col-md-9" }, [
-          _c("a", { staticClass: "posts-title", attrs: { href: "#" } }, [
-            _c("h3", [_vm._v("Astronomy Binoculars A Great Alternative")])
+        _c("p", { staticClass: "view col-lg-12 col-md-12 col-6" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("1.2M Views")]),
+          _vm._v(" "),
+          _c("span", { staticClass: "lnr lnr-eye" })
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "comments col-lg-12 col-md-12 col-6" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("06 Comments")]),
+          _vm._v(" "),
+          _c("span", { staticClass: "lnr lnr-bubble" })
+        ]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "social-links col-lg-12 col-md-12 col-6" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-facebook" })
+            ])
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "excert" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-twitter" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-github" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-behance" })
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-12" }, [
+      _c("div", { staticClass: "quotes" }, [
+        _vm._v(
+          "\n                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should\n                have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of\n                the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row mt-30 mb-30" }, [
+        _c("div", { staticClass: "col-6" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: "img/blog/post-img1.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: "img/blog/post-img2.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-12 mt-30" }, [
+          _c("p", [
             _vm._v(
-              "\n                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.\n            "
+              "\n                        MCSE boot camps have its supporters and its detractors. Some people do not understand why\n                        you should have to spend money on boot camp when you can get the MCSE study materials\n                        yourself at a fraction of the camp price. However, who has the willpower.\n                    "
             )
           ]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "\n                Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed\n            "
+              "\n                        MCSE boot camps have its supporters and its detractors. Some people do not understand why\n                        you should have to spend money on boot camp when you can get the MCSE study materials\n                        yourself at a fraction of the camp price. However, who has the willpower.\n                    "
             )
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-lg-12" }, [
-          _c("div", { staticClass: "quotes" }, [
-            _vm._v(
-              "\n                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row mt-30 mb-30" }, [
-            _c("div", { staticClass: "col-6" }, [
-              _c("img", {
-                staticClass: "img-fluid",
-                attrs: { src: "img/blog/post-img1.jpg", alt: "" }
-              })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "navigation-area" }, [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center"
+          },
+          [
+            _c("div", { staticClass: "thumb" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "img/blog/prev.jpg", alt: "" }
+                })
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-6" }, [
-              _c("img", {
-                staticClass: "img-fluid",
-                attrs: { src: "img/blog/post-img2.jpg", alt: "" }
-              })
+            _c("div", { staticClass: "arrow" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", { staticClass: "lnr text-white lnr-arrow-left" })
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-12 mt-30" }, [
-              _c("p", [
-                _vm._v(
-                  "\n                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.\n                    "
-                )
-              ]),
+            _c("div", { staticClass: "detials" }, [
+              _c("p", [_vm._v("Prev Post")]),
               _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.\n                    "
-                )
+              _c("a", { attrs: { href: "#" } }, [
+                _c("h4", [_vm._v("Space The Final Frontier")])
               ])
             ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "navigation-area" }, [
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center"
-            },
-            [
-              _c("div", { staticClass: "thumb" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("img", {
-                    staticClass: "img-fluid",
-                    attrs: { src: "img/blog/prev.jpg", alt: "" }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "arrow" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("span", { staticClass: "lnr text-white lnr-arrow-left" })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "detials" }, [
-                _c("p", [_vm._v("Prev Post")]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("h4", [_vm._v("Space The Final Frontier")])
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center"
-            },
-            [
-              _c("div", { staticClass: "detials" }, [
-                _c("p", [_vm._v("Next Post")]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("h4", [_vm._v("Telescopes 101")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "arrow" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("span", { staticClass: "lnr text-white lnr-arrow-right" })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "thumb" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("img", {
-                    staticClass: "img-fluid",
-                    attrs: { src: "img/blog/next.jpg", alt: "" }
-                  })
-                ])
-              ])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comments-area" }, [
-        _c("h4", [_vm._v("05 Comments")]),
+          ]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "comment-list" }, [
-          _c(
-            "div",
-            { staticClass: "single-comment justify-content-between d-flex" },
-            [
-              _c(
-                "div",
-                { staticClass: "user justify-content-between d-flex" },
-                [
-                  _c("div", { staticClass: "thumb" }, [
-                    _c("img", { attrs: { src: "img/blog/c1.jpg", alt: "" } })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "desc" }, [
-                    _c("h5", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Emilly Blunt")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "date" }, [
-                      _vm._v("December 4, 2017 at 3:12 pm ")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "comment" }, [
-                      _vm._v(
-                        "\n                            Never say goodbye till the end comes!\n                        "
-                      )
-                    ])
-                  ])
-                ]
-              ),
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center"
+          },
+          [
+            _c("div", { staticClass: "detials" }, [
+              _c("p", [_vm._v("Next Post")]),
               _vm._v(" "),
-              _c("div", { staticClass: "reply-btn" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn-reply text-uppercase",
-                    attrs: { href: "" }
-                  },
-                  [_vm._v("reply")]
-                )
+              _c("a", { attrs: { href: "#" } }, [
+                _c("h4", [_vm._v("Telescopes 101")])
               ])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "comment-list left-padding" }, [
-          _c(
-            "div",
-            { staticClass: "single-comment justify-content-between d-flex" },
-            [
-              _c(
-                "div",
-                { staticClass: "user justify-content-between d-flex" },
-                [
-                  _c("div", { staticClass: "thumb" }, [
-                    _c("img", { attrs: { src: "img/blog/c2.jpg", alt: "" } })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "desc" }, [
-                    _c("h5", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Elsie Cunningham")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "date" }, [
-                      _vm._v("December 4, 2017 at 3:12 pm ")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "comment" }, [
-                      _vm._v(
-                        "\n                            Never say goodbye till the end comes!\n                        "
-                      )
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "reply-btn" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn-reply text-uppercase",
-                    attrs: { href: "" }
-                  },
-                  [_vm._v("reply")]
-                )
-              ])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "comment-list left-padding" }, [
-          _c(
-            "div",
-            { staticClass: "single-comment justify-content-between d-flex" },
-            [
-              _c(
-                "div",
-                { staticClass: "user justify-content-between d-flex" },
-                [
-                  _c("div", { staticClass: "thumb" }, [
-                    _c("img", { attrs: { src: "img/blog/c3.jpg", alt: "" } })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "desc" }, [
-                    _c("h5", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Annie Stephens")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "date" }, [
-                      _vm._v("December 4, 2017 at 3:12 pm ")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "comment" }, [
-                      _vm._v(
-                        "\n                            Never say goodbye till the end comes!\n                        "
-                      )
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "reply-btn" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn-reply text-uppercase",
-                    attrs: { href: "" }
-                  },
-                  [_vm._v("reply")]
-                )
-              ])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "comment-list" }, [
-          _c(
-            "div",
-            { staticClass: "single-comment justify-content-between d-flex" },
-            [
-              _c(
-                "div",
-                { staticClass: "user justify-content-between d-flex" },
-                [
-                  _c("div", { staticClass: "thumb" }, [
-                    _c("img", { attrs: { src: "img/blog/c4.jpg", alt: "" } })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "desc" }, [
-                    _c("h5", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("Maria Luna")])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "date" }, [
-                      _vm._v("December 4, 2017 at 3:12 pm ")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "comment" }, [
-                      _vm._v(
-                        "\n                            Never say goodbye till the end comes!\n                        "
-                      )
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "reply-btn" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn-reply text-uppercase",
-                    attrs: { href: "" }
-                  },
-                  [_vm._v("reply")]
-                )
-              ])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "comment-list" }, [
-          _c(
-            "div",
-            { staticClass: "single-comment justify-content-between d-flex" },
-            [
-              _c(
-                "div",
-                { staticClass: "user justify-content-between d-flex" },
-                [
-                  _c("div", { staticClass: "thumb" }, [
-                    _c("img", { attrs: { src: "img/blog/c5.jpg", alt: "" } })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "desc" }, [
-                    _c("h5", [
-                      _c("a", { attrs: { href: "#" } }, [_vm._v("Ina Hayes")])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "date" }, [
-                      _vm._v("December 4, 2017 at 3:12 pm ")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "comment" }, [
-                      _vm._v(
-                        "\n                            Never say goodbye till the end comes!\n                        "
-                      )
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "reply-btn" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn-reply text-uppercase",
-                    attrs: { href: "" }
-                  },
-                  [_vm._v("reply")]
-                )
-              ])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "comment-form" }, [
-        _c("h4", [_vm._v("Leave a Comment")]),
-        _vm._v(" "),
-        _c("form", [
-          _c("div", { staticClass: "form-group form-inline" }, [
-            _c("div", { staticClass: "form-group col-lg-6 col-md-12 name" }, [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  id: "name",
-                  placeholder: "Enter Name",
-                  onfocus: "this.placeholder = ''",
-                  onblur: "this.placeholder = 'Enter Name'"
-                }
-              })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group col-lg-6 col-md-12 email" }, [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  type: "email",
-                  id: "email",
-                  placeholder: "Enter email address",
-                  onfocus: "this.placeholder = ''",
-                  onblur: "this.placeholder = 'Enter email address'"
-                }
-              })
+            _c("div", { staticClass: "arrow" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", { staticClass: "lnr text-white lnr-arrow-right" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "thumb" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "img/blog/next.jpg", alt: "" }
+                })
+              ])
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "comments-area" }, [
+      _c("h4", [_vm._v("05 Comments")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "comment-list" }, [
+        _c(
+          "div",
+          { staticClass: "single-comment justify-content-between d-flex" },
+          [
+            _c("div", { staticClass: "user justify-content-between d-flex" }, [
+              _c("div", { staticClass: "thumb" }, [
+                _c("img", { attrs: { src: "img/blog/c1.jpg", alt: "" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "desc" }, [
+                _c("h5", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Emilly Blunt")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "date" }, [
+                  _vm._v("December 4, 2017 at 3:12 pm ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "comment" }, [
+                  _vm._v(
+                    "\n                            Never say goodbye till the end comes!\n                        "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reply-btn" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn-reply text-uppercase",
+                  attrs: { href: "" }
+                },
+                [_vm._v("reply")]
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "comment-list left-padding" }, [
+        _c(
+          "div",
+          { staticClass: "single-comment justify-content-between d-flex" },
+          [
+            _c("div", { staticClass: "user justify-content-between d-flex" }, [
+              _c("div", { staticClass: "thumb" }, [
+                _c("img", { attrs: { src: "img/blog/c2.jpg", alt: "" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "desc" }, [
+                _c("h5", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Elsie Cunningham")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "date" }, [
+                  _vm._v("December 4, 2017 at 3:12 pm ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "comment" }, [
+                  _vm._v(
+                    "\n                            Never say goodbye till the end comes!\n                        "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reply-btn" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn-reply text-uppercase",
+                  attrs: { href: "" }
+                },
+                [_vm._v("reply")]
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "comment-list left-padding" }, [
+        _c(
+          "div",
+          { staticClass: "single-comment justify-content-between d-flex" },
+          [
+            _c("div", { staticClass: "user justify-content-between d-flex" }, [
+              _c("div", { staticClass: "thumb" }, [
+                _c("img", { attrs: { src: "img/blog/c3.jpg", alt: "" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "desc" }, [
+                _c("h5", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Annie Stephens")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "date" }, [
+                  _vm._v("December 4, 2017 at 3:12 pm ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "comment" }, [
+                  _vm._v(
+                    "\n                            Never say goodbye till the end comes!\n                        "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reply-btn" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn-reply text-uppercase",
+                  attrs: { href: "" }
+                },
+                [_vm._v("reply")]
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "comment-list" }, [
+        _c(
+          "div",
+          { staticClass: "single-comment justify-content-between d-flex" },
+          [
+            _c("div", { staticClass: "user justify-content-between d-flex" }, [
+              _c("div", { staticClass: "thumb" }, [
+                _c("img", { attrs: { src: "img/blog/c4.jpg", alt: "" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "desc" }, [
+                _c("h5", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Maria Luna")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "date" }, [
+                  _vm._v("December 4, 2017 at 3:12 pm ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "comment" }, [
+                  _vm._v(
+                    "\n                            Never say goodbye till the end comes!\n                        "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reply-btn" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn-reply text-uppercase",
+                  attrs: { href: "" }
+                },
+                [_vm._v("reply")]
+              )
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "comment-list" }, [
+        _c(
+          "div",
+          { staticClass: "single-comment justify-content-between d-flex" },
+          [
+            _c("div", { staticClass: "user justify-content-between d-flex" }, [
+              _c("div", { staticClass: "thumb" }, [
+                _c("img", { attrs: { src: "img/blog/c5.jpg", alt: "" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "desc" }, [
+                _c("h5", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Ina Hayes")])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "date" }, [
+                  _vm._v("December 4, 2017 at 3:12 pm ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "comment" }, [
+                  _vm._v(
+                    "\n                            Never say goodbye till the end comes!\n                        "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "reply-btn" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn-reply text-uppercase",
+                  attrs: { href: "" }
+                },
+                [_vm._v("reply")]
+              )
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "comment-form" }, [
+      _c("h4", [_vm._v("Leave a Comment")]),
+      _vm._v(" "),
+      _c("form", [
+        _c("div", { staticClass: "form-group form-inline" }, [
+          _c("div", { staticClass: "form-group col-lg-6 col-md-12 name" }, [
             _c("input", {
               staticClass: "form-control",
               attrs: {
                 type: "text",
-                id: "subject",
-                placeholder: "Subject",
+                id: "name",
+                placeholder: "Enter Name",
                 onfocus: "this.placeholder = ''",
-                onblur: "this.placeholder = 'Subject'"
+                onblur: "this.placeholder = 'Enter Name'"
               }
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("textarea", {
-              staticClass: "form-control mb-10",
+          _c("div", { staticClass: "form-group col-lg-6 col-md-12 email" }, [
+            _c("input", {
+              staticClass: "form-control",
               attrs: {
-                rows: "5",
-                name: "message",
-                placeholder: "Messege",
+                type: "email",
+                id: "email",
+                placeholder: "Enter email address",
                 onfocus: "this.placeholder = ''",
-                onblur: "this.placeholder = 'Messege'",
-                required: ""
+                onblur: "this.placeholder = 'Enter email address'"
               }
             })
-          ]),
-          _vm._v(" "),
-          _c(
-            "a",
-            { staticClass: "primary-btn text-uppercase", attrs: { href: "#" } },
-            [_vm._v("Post Comment")]
-          )
-        ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              id: "subject",
+              placeholder: "Subject",
+              onfocus: "this.placeholder = ''",
+              onblur: "this.placeholder = 'Subject'"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("textarea", {
+            staticClass: "form-control mb-10",
+            attrs: {
+              rows: "5",
+              name: "message",
+              placeholder: "Messege",
+              onfocus: "this.placeholder = ''",
+              onblur: "this.placeholder = 'Messege'",
+              required: ""
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "primary-btn text-uppercase", attrs: { href: "#" } },
+          [_vm._v("Post Comment")]
+        )
       ])
     ])
   }
@@ -64021,254 +64103,254 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 17,
-	"./af.js": 17,
-	"./ar": 18,
-	"./ar-dz": 19,
-	"./ar-dz.js": 19,
-	"./ar-kw": 20,
-	"./ar-kw.js": 20,
-	"./ar-ly": 21,
-	"./ar-ly.js": 21,
-	"./ar-ma": 22,
-	"./ar-ma.js": 22,
-	"./ar-sa": 23,
-	"./ar-sa.js": 23,
-	"./ar-tn": 24,
-	"./ar-tn.js": 24,
-	"./ar.js": 18,
-	"./az": 25,
-	"./az.js": 25,
-	"./be": 26,
-	"./be.js": 26,
-	"./bg": 27,
-	"./bg.js": 27,
-	"./bm": 28,
-	"./bm.js": 28,
-	"./bn": 29,
-	"./bn.js": 29,
-	"./bo": 30,
-	"./bo.js": 30,
-	"./br": 31,
-	"./br.js": 31,
-	"./bs": 32,
-	"./bs.js": 32,
-	"./ca": 33,
-	"./ca.js": 33,
-	"./cs": 34,
-	"./cs.js": 34,
-	"./cv": 35,
-	"./cv.js": 35,
-	"./cy": 36,
-	"./cy.js": 36,
-	"./da": 37,
-	"./da.js": 37,
-	"./de": 38,
-	"./de-at": 39,
-	"./de-at.js": 39,
-	"./de-ch": 40,
-	"./de-ch.js": 40,
-	"./de.js": 38,
-	"./dv": 41,
-	"./dv.js": 41,
-	"./el": 42,
-	"./el.js": 42,
-	"./en-au": 43,
-	"./en-au.js": 43,
-	"./en-ca": 44,
-	"./en-ca.js": 44,
-	"./en-gb": 45,
-	"./en-gb.js": 45,
-	"./en-ie": 46,
-	"./en-ie.js": 46,
-	"./en-il": 47,
-	"./en-il.js": 47,
-	"./en-nz": 48,
-	"./en-nz.js": 48,
-	"./eo": 49,
-	"./eo.js": 49,
-	"./es": 50,
-	"./es-do": 51,
-	"./es-do.js": 51,
-	"./es-us": 52,
-	"./es-us.js": 52,
-	"./es.js": 50,
-	"./et": 53,
-	"./et.js": 53,
-	"./eu": 54,
-	"./eu.js": 54,
-	"./fa": 55,
-	"./fa.js": 55,
-	"./fi": 56,
-	"./fi.js": 56,
-	"./fo": 57,
-	"./fo.js": 57,
-	"./fr": 58,
-	"./fr-ca": 59,
-	"./fr-ca.js": 59,
-	"./fr-ch": 60,
-	"./fr-ch.js": 60,
-	"./fr.js": 58,
-	"./fy": 61,
-	"./fy.js": 61,
-	"./gd": 62,
-	"./gd.js": 62,
-	"./gl": 63,
-	"./gl.js": 63,
-	"./gom-latn": 64,
-	"./gom-latn.js": 64,
-	"./gu": 65,
-	"./gu.js": 65,
-	"./he": 66,
-	"./he.js": 66,
-	"./hi": 67,
-	"./hi.js": 67,
-	"./hr": 68,
-	"./hr.js": 68,
-	"./hu": 69,
-	"./hu.js": 69,
-	"./hy-am": 70,
-	"./hy-am.js": 70,
-	"./id": 71,
-	"./id.js": 71,
-	"./is": 72,
-	"./is.js": 72,
-	"./it": 73,
-	"./it.js": 73,
-	"./ja": 74,
-	"./ja.js": 74,
-	"./jv": 75,
-	"./jv.js": 75,
-	"./ka": 76,
-	"./ka.js": 76,
-	"./kk": 77,
-	"./kk.js": 77,
-	"./km": 78,
-	"./km.js": 78,
-	"./kn": 79,
-	"./kn.js": 79,
-	"./ko": 80,
-	"./ko.js": 80,
-	"./ku": 81,
-	"./ku.js": 81,
-	"./ky": 82,
-	"./ky.js": 82,
-	"./lb": 83,
-	"./lb.js": 83,
-	"./lo": 84,
-	"./lo.js": 84,
-	"./lt": 85,
-	"./lt.js": 85,
-	"./lv": 86,
-	"./lv.js": 86,
-	"./me": 87,
-	"./me.js": 87,
-	"./mi": 88,
-	"./mi.js": 88,
-	"./mk": 89,
-	"./mk.js": 89,
-	"./ml": 90,
-	"./ml.js": 90,
-	"./mn": 91,
-	"./mn.js": 91,
-	"./mr": 92,
-	"./mr.js": 92,
-	"./ms": 93,
-	"./ms-my": 94,
-	"./ms-my.js": 94,
-	"./ms.js": 93,
-	"./mt": 95,
-	"./mt.js": 95,
-	"./my": 96,
-	"./my.js": 96,
-	"./nb": 97,
-	"./nb.js": 97,
-	"./ne": 98,
-	"./ne.js": 98,
-	"./nl": 99,
-	"./nl-be": 100,
-	"./nl-be.js": 100,
-	"./nl.js": 99,
-	"./nn": 101,
-	"./nn.js": 101,
-	"./pa-in": 102,
-	"./pa-in.js": 102,
-	"./pl": 103,
-	"./pl.js": 103,
-	"./pt": 104,
-	"./pt-br": 105,
-	"./pt-br.js": 105,
-	"./pt.js": 104,
-	"./ro": 106,
-	"./ro.js": 106,
-	"./ru": 107,
-	"./ru.js": 107,
-	"./sd": 108,
-	"./sd.js": 108,
-	"./se": 109,
-	"./se.js": 109,
-	"./si": 110,
-	"./si.js": 110,
-	"./sk": 111,
-	"./sk.js": 111,
-	"./sl": 112,
-	"./sl.js": 112,
-	"./sq": 113,
-	"./sq.js": 113,
-	"./sr": 114,
-	"./sr-cyrl": 115,
-	"./sr-cyrl.js": 115,
-	"./sr.js": 114,
-	"./ss": 116,
-	"./ss.js": 116,
-	"./sv": 117,
-	"./sv.js": 117,
-	"./sw": 118,
-	"./sw.js": 118,
-	"./ta": 119,
-	"./ta.js": 119,
-	"./te": 120,
-	"./te.js": 120,
-	"./tet": 121,
-	"./tet.js": 121,
-	"./tg": 122,
-	"./tg.js": 122,
-	"./th": 123,
-	"./th.js": 123,
-	"./tl-ph": 124,
-	"./tl-ph.js": 124,
-	"./tlh": 125,
-	"./tlh.js": 125,
-	"./tr": 126,
-	"./tr.js": 126,
-	"./tzl": 127,
-	"./tzl.js": 127,
-	"./tzm": 128,
-	"./tzm-latn": 129,
-	"./tzm-latn.js": 129,
-	"./tzm.js": 128,
-	"./ug-cn": 130,
-	"./ug-cn.js": 130,
-	"./uk": 131,
-	"./uk.js": 131,
-	"./ur": 132,
-	"./ur.js": 132,
-	"./uz": 133,
-	"./uz-latn": 134,
-	"./uz-latn.js": 134,
-	"./uz.js": 133,
-	"./vi": 135,
-	"./vi.js": 135,
-	"./x-pseudo": 136,
-	"./x-pseudo.js": 136,
-	"./yo": 137,
-	"./yo.js": 137,
-	"./zh-cn": 138,
-	"./zh-cn.js": 138,
-	"./zh-hk": 139,
-	"./zh-hk.js": 139,
-	"./zh-tw": 140,
-	"./zh-tw.js": 140
+	"./af": 18,
+	"./af.js": 18,
+	"./ar": 19,
+	"./ar-dz": 20,
+	"./ar-dz.js": 20,
+	"./ar-kw": 21,
+	"./ar-kw.js": 21,
+	"./ar-ly": 22,
+	"./ar-ly.js": 22,
+	"./ar-ma": 23,
+	"./ar-ma.js": 23,
+	"./ar-sa": 24,
+	"./ar-sa.js": 24,
+	"./ar-tn": 25,
+	"./ar-tn.js": 25,
+	"./ar.js": 19,
+	"./az": 26,
+	"./az.js": 26,
+	"./be": 27,
+	"./be.js": 27,
+	"./bg": 28,
+	"./bg.js": 28,
+	"./bm": 29,
+	"./bm.js": 29,
+	"./bn": 30,
+	"./bn.js": 30,
+	"./bo": 31,
+	"./bo.js": 31,
+	"./br": 32,
+	"./br.js": 32,
+	"./bs": 33,
+	"./bs.js": 33,
+	"./ca": 34,
+	"./ca.js": 34,
+	"./cs": 35,
+	"./cs.js": 35,
+	"./cv": 36,
+	"./cv.js": 36,
+	"./cy": 37,
+	"./cy.js": 37,
+	"./da": 38,
+	"./da.js": 38,
+	"./de": 39,
+	"./de-at": 40,
+	"./de-at.js": 40,
+	"./de-ch": 41,
+	"./de-ch.js": 41,
+	"./de.js": 39,
+	"./dv": 42,
+	"./dv.js": 42,
+	"./el": 43,
+	"./el.js": 43,
+	"./en-au": 44,
+	"./en-au.js": 44,
+	"./en-ca": 45,
+	"./en-ca.js": 45,
+	"./en-gb": 46,
+	"./en-gb.js": 46,
+	"./en-ie": 47,
+	"./en-ie.js": 47,
+	"./en-il": 48,
+	"./en-il.js": 48,
+	"./en-nz": 49,
+	"./en-nz.js": 49,
+	"./eo": 50,
+	"./eo.js": 50,
+	"./es": 51,
+	"./es-do": 52,
+	"./es-do.js": 52,
+	"./es-us": 53,
+	"./es-us.js": 53,
+	"./es.js": 51,
+	"./et": 54,
+	"./et.js": 54,
+	"./eu": 55,
+	"./eu.js": 55,
+	"./fa": 56,
+	"./fa.js": 56,
+	"./fi": 57,
+	"./fi.js": 57,
+	"./fo": 58,
+	"./fo.js": 58,
+	"./fr": 59,
+	"./fr-ca": 60,
+	"./fr-ca.js": 60,
+	"./fr-ch": 61,
+	"./fr-ch.js": 61,
+	"./fr.js": 59,
+	"./fy": 62,
+	"./fy.js": 62,
+	"./gd": 63,
+	"./gd.js": 63,
+	"./gl": 64,
+	"./gl.js": 64,
+	"./gom-latn": 65,
+	"./gom-latn.js": 65,
+	"./gu": 66,
+	"./gu.js": 66,
+	"./he": 67,
+	"./he.js": 67,
+	"./hi": 68,
+	"./hi.js": 68,
+	"./hr": 69,
+	"./hr.js": 69,
+	"./hu": 70,
+	"./hu.js": 70,
+	"./hy-am": 71,
+	"./hy-am.js": 71,
+	"./id": 72,
+	"./id.js": 72,
+	"./is": 73,
+	"./is.js": 73,
+	"./it": 74,
+	"./it.js": 74,
+	"./ja": 75,
+	"./ja.js": 75,
+	"./jv": 76,
+	"./jv.js": 76,
+	"./ka": 77,
+	"./ka.js": 77,
+	"./kk": 78,
+	"./kk.js": 78,
+	"./km": 79,
+	"./km.js": 79,
+	"./kn": 80,
+	"./kn.js": 80,
+	"./ko": 81,
+	"./ko.js": 81,
+	"./ku": 82,
+	"./ku.js": 82,
+	"./ky": 83,
+	"./ky.js": 83,
+	"./lb": 84,
+	"./lb.js": 84,
+	"./lo": 85,
+	"./lo.js": 85,
+	"./lt": 86,
+	"./lt.js": 86,
+	"./lv": 87,
+	"./lv.js": 87,
+	"./me": 88,
+	"./me.js": 88,
+	"./mi": 89,
+	"./mi.js": 89,
+	"./mk": 90,
+	"./mk.js": 90,
+	"./ml": 91,
+	"./ml.js": 91,
+	"./mn": 92,
+	"./mn.js": 92,
+	"./mr": 93,
+	"./mr.js": 93,
+	"./ms": 94,
+	"./ms-my": 95,
+	"./ms-my.js": 95,
+	"./ms.js": 94,
+	"./mt": 96,
+	"./mt.js": 96,
+	"./my": 97,
+	"./my.js": 97,
+	"./nb": 98,
+	"./nb.js": 98,
+	"./ne": 99,
+	"./ne.js": 99,
+	"./nl": 100,
+	"./nl-be": 101,
+	"./nl-be.js": 101,
+	"./nl.js": 100,
+	"./nn": 102,
+	"./nn.js": 102,
+	"./pa-in": 103,
+	"./pa-in.js": 103,
+	"./pl": 104,
+	"./pl.js": 104,
+	"./pt": 105,
+	"./pt-br": 106,
+	"./pt-br.js": 106,
+	"./pt.js": 105,
+	"./ro": 107,
+	"./ro.js": 107,
+	"./ru": 108,
+	"./ru.js": 108,
+	"./sd": 109,
+	"./sd.js": 109,
+	"./se": 110,
+	"./se.js": 110,
+	"./si": 111,
+	"./si.js": 111,
+	"./sk": 112,
+	"./sk.js": 112,
+	"./sl": 113,
+	"./sl.js": 113,
+	"./sq": 114,
+	"./sq.js": 114,
+	"./sr": 115,
+	"./sr-cyrl": 116,
+	"./sr-cyrl.js": 116,
+	"./sr.js": 115,
+	"./ss": 117,
+	"./ss.js": 117,
+	"./sv": 118,
+	"./sv.js": 118,
+	"./sw": 119,
+	"./sw.js": 119,
+	"./ta": 120,
+	"./ta.js": 120,
+	"./te": 121,
+	"./te.js": 121,
+	"./tet": 122,
+	"./tet.js": 122,
+	"./tg": 123,
+	"./tg.js": 123,
+	"./th": 124,
+	"./th.js": 124,
+	"./tl-ph": 125,
+	"./tl-ph.js": 125,
+	"./tlh": 126,
+	"./tlh.js": 126,
+	"./tr": 127,
+	"./tr.js": 127,
+	"./tzl": 128,
+	"./tzl.js": 128,
+	"./tzm": 129,
+	"./tzm-latn": 130,
+	"./tzm-latn.js": 130,
+	"./tzm.js": 129,
+	"./ug-cn": 131,
+	"./ug-cn.js": 131,
+	"./uk": 132,
+	"./uk.js": 132,
+	"./ur": 133,
+	"./ur.js": 133,
+	"./uz": 134,
+	"./uz-latn": 135,
+	"./uz-latn.js": 135,
+	"./uz.js": 134,
+	"./vi": 136,
+	"./vi.js": 136,
+	"./x-pseudo": 137,
+	"./x-pseudo.js": 137,
+	"./yo": 138,
+	"./yo.js": 138,
+	"./zh-cn": 139,
+	"./zh-cn.js": 139,
+	"./zh-hk": 140,
+	"./zh-hk.js": 140,
+	"./zh-tw": 141,
+	"./zh-tw.js": 141
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));

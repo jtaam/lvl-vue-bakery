@@ -53,7 +53,7 @@ class PostController extends Controller
     public function show($slug)
     {
         //
-        $post = Post::where('slug', $slug)->get();
+        $post = Post::where('slug', $slug)->with('category','author','comments')->get();
 //        dd($post);
         return new PostResource($post);
     }
