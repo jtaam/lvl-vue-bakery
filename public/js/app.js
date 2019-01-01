@@ -17082,17 +17082,21 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(198)
+}
 var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(175)
 /* template */
-var __vue_template__ = __webpack_require__(176)
+var __vue_template__ = __webpack_require__(200)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-9ff40492"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -63496,8 +63500,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 "right_image": "",
                 "public_id": null,
                 "bottom_description": "",
-                "view_count": 4
-
+                "view_count": 4,
+                author: {},
+                comments: {}
             }
         };
     },
@@ -63527,225 +63532,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 176 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-lg-8 posts-list" }, [
-    _c("div", { staticClass: "single-post row" }, [
-      _c("div", { staticClass: "col-lg-12" }, [
-        _c("div", { staticClass: "feature-img" }, [
-          _c("img", {
-            staticClass: "img-fluid",
-            attrs: { src: _vm.post.top_image, alt: _vm.post.title }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-9 col-md-9" }, [
-        _c("a", { staticClass: "posts-title", attrs: { href: "#" } }, [
-          _c("h3", [_vm._v(_vm._s(_vm.post.title))])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "excert" }, [
-          _vm._v(
-            "\n                " +
-              _vm._s(_vm.post.top_description) +
-              "\n            "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-12" }, [
-        _c("div", { staticClass: "quotes" }, [
-          _vm._v(
-            "\n                " +
-              _vm._s(_vm.post.post_promo) +
-              "\n            "
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row mt-30 mb-30" }, [
-          _c("div", { staticClass: "col-6" }, [
-            _c("img", {
-              staticClass: "img-fluid",
-              attrs: { src: _vm.post.left_image, alt: _vm.post.title }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-6" }, [
-            _c("img", {
-              staticClass: "img-fluid",
-              attrs: { src: _vm.post.right_image, alt: _vm.post.title }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-12 mt-30" }, [
-            _c("p", [_vm._v(_vm._s(_vm.post.bottom_description))])
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _vm._m(1)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3  col-md-3 meta-details" }, [
-      _c("ul", { staticClass: "tags" }, [
-        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Food,")])]),
-        _vm._v(" "),
-        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Technology,")])]),
-        _vm._v(" "),
-        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Politics,")])]),
-        _vm._v(" "),
-        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lifestyle")])])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "user-details row" }, [
-        _c("p", { staticClass: "user-name col-lg-12 col-md-12 col-6" }, [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Mark wiens")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "lnr lnr-user" })
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "date col-lg-12 col-md-12 col-6" }, [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("12 Dec, 2017")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "lnr lnr-calendar-full" })
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "view col-lg-12 col-md-12 col-6" }, [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("1.2M Views")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "lnr lnr-eye" })
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "comments col-lg-12 col-md-12 col-6" }, [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("06 Comments")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "lnr lnr-bubble" })
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "social-links col-lg-12 col-md-12 col-6" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-facebook" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-twitter" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-github" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-behance" })
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "comment-form" }, [
-      _c("h4", [_vm._v("Leave a Comment")]),
-      _vm._v(" "),
-      _c("form", [
-        _c("div", { staticClass: "form-group form-inline" }, [
-          _c("div", { staticClass: "form-group col-lg-6 col-md-12 name" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                id: "name",
-                placeholder: "Enter Name",
-                onfocus: "this.placeholder = ''",
-                onblur: "this.placeholder = 'Enter Name'"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group col-lg-6 col-md-12 email" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: {
-                type: "email",
-                id: "email",
-                placeholder: "Enter email address",
-                onfocus: "this.placeholder = ''",
-                onblur: "this.placeholder = 'Enter email address'"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              id: "subject",
-              placeholder: "Subject",
-              onfocus: "this.placeholder = ''",
-              onblur: "this.placeholder = 'Subject'"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("textarea", {
-            staticClass: "form-control mb-10",
-            attrs: {
-              rows: "5",
-              name: "message",
-              placeholder: "Messege",
-              onfocus: "this.placeholder = ''",
-              onblur: "this.placeholder = 'Messege'",
-              required: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "a",
-          { staticClass: "primary-btn text-uppercase", attrs: { href: "#" } },
-          [_vm._v("Post Comment")]
-        )
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-9ff40492", module.exports)
-  }
-}
-
-/***/ }),
+/* 176 */,
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -64375,6 +64162,292 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(199);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("79e97144", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9ff40492\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PostComponent.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9ff40492\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PostComponent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(5)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.social-links li[data-v-9ff40492]{\n    float: right;\n}\n.social-links li a i[data-v-9ff40492]{\n    color: #222;\n    margin: 0 15px;\n}\n.social-links li a i[data-v-9ff40492]:hover{\n    color: #d1ab7f;\n    -webkit-transition: all 0.3s ease 0s;\n    transition: all 0.3s ease 0s;\n}\n.social-links li a i[data-v-9ff40492]:last-child{\n    margin-right: 0;\n}\n.quotes[data-v-9ff40492] {\n    margin-top: 20px;\n    padding: 30px;\n    background-color: #fff;\n    -webkit-box-shadow: -20.84px 21.58px 30px 0px rgba(176,176,176,0.1);\n            box-shadow: -20.84px 21.58px 30px 0px rgba(176,176,176,0.1);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-lg-8 posts-list" }, [
+    _c("div", { staticClass: "single-post row" }, [
+      _c("div", { staticClass: "col-lg-12" }, [
+        _c("div", { staticClass: "feature-img" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: _vm.post.top_image, alt: _vm.post.title }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-3  col-md-3 meta-details" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "user-details row" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("p", { staticClass: "date col-lg-12 col-md-12 col-6" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _vm._v(
+                _vm._s(_vm._f("userCreateDate")(_vm.post.author.created_at))
+              )
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "lnr lnr-calendar-full" })
+          ]),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _c("p", { staticClass: "comments col-lg-12 col-md-12 col-6" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _vm._v(_vm._s(_vm.post.comments.length) + " Comments")
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "lnr lnr-bubble" })
+          ]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "social-links col-lg-12 col-md-12 col-6" }, [
+            _c("li", [
+              _c("a", { attrs: { href: _vm.post.author.facebook } }, [
+                _c("i", { staticClass: "fa fa-facebook" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: _vm.post.author.twitter } }, [
+                _c("i", { staticClass: "fa fa-twitter" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: _vm.post.author.github } }, [
+                _c("i", { staticClass: "fa fa-github" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: _vm.post.author.behance } }, [
+                _c("i", { staticClass: "fa fa-behance" })
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-9 col-md-9" }, [
+        _c("a", { staticClass: "posts-title", attrs: { href: "#" } }, [
+          _c("h3", [_vm._v(_vm._s(_vm.post.title))])
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "excert" }, [
+          _vm._v(
+            "\n                " +
+              _vm._s(_vm.post.top_description) +
+              "\n            "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-12" }, [
+        _c("div", { staticClass: "quotes" }, [
+          _vm._v(
+            "\n                " +
+              _vm._s(_vm.post.post_promo) +
+              "\n            "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-30 mb-30" }, [
+          _c("div", { staticClass: "col-6" }, [
+            _c("img", {
+              staticClass: "img-fluid",
+              attrs: { src: _vm.post.left_image, alt: _vm.post.title }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("img", {
+              staticClass: "img-fluid",
+              attrs: { src: _vm.post.right_image, alt: _vm.post.title }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-12 mt-30" }, [
+            _c("p", [_vm._v(_vm._s(_vm.post.bottom_description))])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "tags" }, [
+      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Food,")])]),
+      _vm._v(" "),
+      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Technology,")])]),
+      _vm._v(" "),
+      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Politics,")])]),
+      _vm._v(" "),
+      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Lifestyle")])])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "user-name col-lg-12 col-md-12 col-6" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Mark wiens")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "lnr lnr-user" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "view col-lg-12 col-md-12 col-6" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("1.2M Views")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "lnr lnr-eye" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "comment-form" }, [
+      _c("h4", [_vm._v("Leave a Comment")]),
+      _vm._v(" "),
+      _c("form", [
+        _c("div", { staticClass: "form-group form-inline" }, [
+          _c("div", { staticClass: "form-group col-lg-6 col-md-12 name" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                id: "name",
+                placeholder: "Enter Name",
+                onfocus: "this.placeholder = ''",
+                onblur: "this.placeholder = 'Enter Name'"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-lg-6 col-md-12 email" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: {
+                type: "email",
+                id: "email",
+                placeholder: "Enter email address",
+                onfocus: "this.placeholder = ''",
+                onblur: "this.placeholder = 'Enter email address'"
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              id: "subject",
+              placeholder: "Subject",
+              onfocus: "this.placeholder = ''",
+              onblur: "this.placeholder = 'Subject'"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("textarea", {
+            staticClass: "form-control mb-10",
+            attrs: {
+              rows: "5",
+              name: "message",
+              placeholder: "Messege",
+              onfocus: "this.placeholder = ''",
+              onblur: "this.placeholder = 'Messege'",
+              required: ""
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "primary-btn text-uppercase", attrs: { href: "#" } },
+          [_vm._v("Post Comment")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9ff40492", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

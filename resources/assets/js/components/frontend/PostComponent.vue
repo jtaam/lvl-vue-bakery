@@ -17,17 +17,17 @@
                 <div class="user-details row">
                     <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span
                             class="lnr lnr-user"></span></p>
-                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span
+                    <p class="date col-lg-12 col-md-12 col-6"><a href="#">{{post.author.created_at|userCreateDate}}</a> <span
                             class="lnr lnr-calendar-full"></span></p>
                     <p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span
                             class="lnr lnr-eye"></span></p>
-                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span
+                    <p class="comments col-lg-12 col-md-12 col-6"><a href="#">{{post.comments.length}} Comments</a> <span
                             class="lnr lnr-bubble"></span></p>
                     <ul class="social-links col-lg-12 col-md-12 col-6">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-github"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a v-bind:href=post.author.facebook><i class="fa fa-facebook"></i></a></li>
+                        <li><a v-bind:href=post.author.twitter><i class="fa fa-twitter"></i></a></li>
+                        <li><a v-bind:href=post.author.github><i class="fa fa-github"></i></a></li>
+                        <li><a v-bind:href=post.author.behance><i class="fa fa-behance"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -236,7 +236,12 @@
                     "public_id": null,
                     "bottom_description": "",
                     "view_count": 4,
+                    author:{
 
+                    },
+                    comments:{
+
+                    },
                 },
             }
         },//data
@@ -263,3 +268,26 @@
         },//methods
     }
 </script>
+
+<style scoped>
+    .social-links li{
+        float: right;
+    }
+    .social-links li a i{
+        color: #222;
+        margin: 0 15px;
+    }
+    .social-links li a i:hover{
+        color: #d1ab7f;
+        transition: all 0.3s ease 0s;
+    }
+    .social-links li a i:last-child{
+        margin-right: 0;
+    }
+    .quotes {
+        margin-top: 20px;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: -20.84px 21.58px 30px 0px rgba(176,176,176,0.1);
+    }
+</style>
