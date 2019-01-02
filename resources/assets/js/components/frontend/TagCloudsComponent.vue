@@ -23,13 +23,20 @@
         },//created
 
         methods:{
-            fetchTags(){
-                fetch('api/tags').
-                    then(response => response.json()).
-                    then(response => {
-                    this.tags = response.data;
-                })
-            } //fetchTags
+            fetchTags() {
+                // Get all Tags from API
+                axios.get('api/tags')
+                    .then((response) => {
+                        this.tags = response.data.data;
+                        console.log(this.tags);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+                    .then(function () {
+                        // always executed
+                    });
+            }, // fetchTags
         },//methods
     }
 </script>

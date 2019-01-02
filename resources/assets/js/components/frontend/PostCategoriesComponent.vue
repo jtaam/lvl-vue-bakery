@@ -32,13 +32,21 @@
         },//created
 
         methods:{
-            fetchCategories(){
-                fetch('api/categories').
-                    then(response => response.json()).
-                    then(response => {
-                        this.categories = response.data;
-                })
-            } //fetchCategories
+            fetchCategories() {
+                // Get all categories from API
+                axios.get('api/categories')
+                    .then((response) => {
+                        this.categories = response.data.data;
+                        console.log(this.categories);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+                    .then(function () {
+                        // always executed
+                    });
+            }, // fetchCategories
+
         },//methods
     }
 </script>

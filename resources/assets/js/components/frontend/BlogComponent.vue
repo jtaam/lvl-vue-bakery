@@ -115,7 +115,7 @@
             //         then( response => {
             //             this.posts = response.data;
             //     })
-            // } // fetchPosts
+            // }, // fetchPosts
             fetchPosts(){
                 // Make a request for a user with a given ID
                 axios.get('/api/posts')
