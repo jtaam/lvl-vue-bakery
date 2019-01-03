@@ -29128,7 +29128,10 @@ window.Vue = __webpack_require__(15);
 
 // Vue filters
 Vue.filter('userCreateDate', function (created) {
-  return __WEBPACK_IMPORTED_MODULE_1_moment___default()(created).format('ll');
+    return __WEBPACK_IMPORTED_MODULE_1_moment___default()(created).format('ll');
+});
+Vue.filter('commentCreateDate', function (created) {
+    return __WEBPACK_IMPORTED_MODULE_1_moment___default()(created).subtract(1, 'days').calendar();
 });
 /**
  * Vue application instances
@@ -29144,8 +29147,8 @@ Vue.component('show-post', __webpack_require__(17));
 var axios = __webpack_require__(8);
 
 var app = new Vue({
-  el: '#app',
-  router: __WEBPACK_IMPORTED_MODULE_0__components_frontend_routes_js__["a" /* default */]
+    el: '#app',
+    router: __WEBPACK_IMPORTED_MODULE_0__components_frontend_routes_js__["a" /* default */]
 });
 
 /***/ }),
@@ -63412,9 +63415,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 // import CommentComponent from "./CommentComponent";
@@ -63458,6 +63458,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     created: function created() {
         this.fetchPost();
+        console.log(this.post.comments);
     },
     //created
 
@@ -63783,7 +63784,11 @@ var render = function() {
                         _vm._m(3, true),
                         _vm._v(" "),
                         _c("p", { staticClass: "date" }, [
-                          _vm._v("December 4, 2017 at 3:12 pm ")
+                          _vm._v(
+                            _vm._s(
+                              _vm._f("commentCreateDate")(item.created_at)
+                            ) + " "
+                          )
                         ]),
                         _vm._v(" "),
                         _c("p", { staticClass: "comment" }, [
@@ -63795,9 +63800,7 @@ var render = function() {
                         ])
                       ])
                     ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(4, true)
+                  )
                 ]
               )
             ])
@@ -63806,7 +63809,7 @@ var render = function() {
         2
       ),
       _vm._v(" "),
-      _vm._m(5)
+      _vm._m(4)
     ],
     1
   )
@@ -63851,19 +63854,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h5", [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Author Name?")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "reply-btn" }, [
-      _c(
-        "a",
-        { staticClass: "btn-reply text-uppercase", attrs: { href: "" } },
-        [_vm._v("reply")]
-      )
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Commenter Name?")])
     ])
   },
   function() {

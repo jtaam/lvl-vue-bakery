@@ -67,15 +67,12 @@
                             <!--<img v-bind:src=post.comment.author.image alt="">-->
                         </div>
                         <div class="desc">
-                            <h5><a href="#">Author Name?</a></h5>
-                            <p class="date">December 4, 2017 at 3:12 pm </p>
+                            <h5><a href="#">Commenter Name?</a></h5>
+                            <p class="date">{{item.created_at|commentCreateDate}} </p>
                             <p class="comment">
                                 {{item.comment}}
                             </p>
                         </div>
-                    </div>
-                    <div class="reply-btn">
-                        <a href="" class="btn-reply text-uppercase">reply</a>
                     </div>
                 </div>
             </div>
@@ -154,6 +151,7 @@
 
         created() {
             this.fetchPost();
+            console.log(this.post.comments);
         },//created
 
         methods: {

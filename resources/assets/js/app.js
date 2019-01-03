@@ -15,6 +15,9 @@ import moment from 'moment';
 Vue.filter('userCreateDate', function(created){
     return moment(created).format('ll');
 });
+Vue.filter('commentCreateDate', function(created){
+    return moment(created).subtract(1, 'days').calendar();
+});
 /**
  * Vue application instances
  */
